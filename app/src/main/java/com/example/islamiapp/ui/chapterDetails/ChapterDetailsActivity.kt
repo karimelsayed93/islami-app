@@ -2,14 +2,12 @@ package com.example.islamiapp.ui.chapterDetails
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.RecyclerView
 import com.example.islamiapp.databinding.ActivityChapterDetailsBinding
 
 
 class ChapterDetailsActivity : AppCompatActivity() {
     var chapterPosition = -1
     lateinit var chapterTitle: String
-    lateinit var versesRecycler: RecyclerView
     lateinit var binding: ActivityChapterDetailsBinding
 
 
@@ -43,13 +41,13 @@ class ChapterDetailsActivity : AppCompatActivity() {
 
     private fun bindVersesToRecyclerViewAdapter(versesList: List<String>) {
         val versesAdapter = VersesAdapter(versesList)
-        versesRecycler.adapter = versesAdapter
+        binding.content.versesRecycler.adapter = versesAdapter
     }
 
 
     private fun initViews() {
         //to show back button
-        setSupportActionBar(binding.toolBar)
+        setSupportActionBar(binding.toolbar)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)

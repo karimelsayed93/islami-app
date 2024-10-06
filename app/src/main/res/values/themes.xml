@@ -25,4 +25,10 @@
         <item name="android:textColor">@color/black_text_color</item>
         <item name="font">@font/regular_messeri</item>
     </style>
+
+    <style name="bodyRegular">
+        <item name="android:textSize">21sp</item>
+        <item name="android:textColor">@color/black_text_color</item>
+        <item name="font">@font/regular_messeri</item>
+    </style>
 </resources>
